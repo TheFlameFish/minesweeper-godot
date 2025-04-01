@@ -43,11 +43,16 @@ func _process(_delta: float) -> void:
 	else:
 		set_icon(num_icons[number])
 	
+	# Don't let revealed tiles be flagged
+	flagged = flagged and not revealed
+	
 	$flag.visible = flagged
 
 func _on_collider_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event.is_action_released("ui_touch"):
+	if event.is_action_released("mouse_reveal", true) and not flagged:
 		revealed = true
 		detonated.emit()
+	elif event.is_action_released("mouse_flag", true) and not revealed:
+		flagged = not flagged
 	else:
 		pass

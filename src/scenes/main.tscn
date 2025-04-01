@@ -7,3 +7,4 @@
 [node name="Tile" parent="." instance=ExtResource("1_kkvs4")]
 position = Vector2(161, 129)
 number = 3
+flagged = true
