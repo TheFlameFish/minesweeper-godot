@@ -1,10 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://sb1c61b3h6gi"]
-
-[ext_resource type="PackedScene" uid="uid://dydewni4cqtu3" path="res://src/scenes/tile/Tile.tscn" id="1_kkvs4"]
+[gd_scene format=3 uid="uid://sb1c61b3h6gi"]
 
 [node name="Main" type="Node2D"]
-
-[node name="Tile" parent="." instance=ExtResource("1_kkvs4")]
-position = Vector2(161, 129)
-number = 3
-flagged = true
