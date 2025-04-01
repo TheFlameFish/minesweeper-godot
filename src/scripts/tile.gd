@@ -3,6 +3,9 @@ class_name Tile extends Node2D
 ## If this tile is a mine, emitted when it's clicked
 signal detonated
 
+## Whether to take user input
+@export var enabled: bool = true
+
 @export var number: int = 0
 
 @export var revealed: bool = false
@@ -49,10 +52,11 @@ func _process(_delta: float) -> void:
 	$flag.visible = flagged
 
 func _on_collider_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if not enabled:
+		return
+	
 	if event.is_action_released("mouse_reveal", true) and not flagged:
 		revealed = true
 		detonated.emit()
 	elif event.is_action_released("mouse_flag", true) and not revealed:
 		flagged = not flagged
-	else:
-		pass
