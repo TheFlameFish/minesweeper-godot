@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dydewni4cqtu3"]
 
-[ext_resource type="Script" uid="uid://c55dq2x427h36" path="res://assets/scripts/tile.gd" id="1_g8syq"]
+[ext_resource type="Script" uid="uid://c55dq2x427h36" path="res://src/scripts/tile.gd" id="1_g8syq"]
 [ext_resource type="Texture2D" uid="uid://c6c5qbauqxup8" path="res://assets/images/tile/tile_Backing.png" id="2_2uftb"]
 [ext_resource type="Texture2D" uid="uid://d5meqfglsnfw" path="res://assets/images/tile/tile_Mystery.png" id="3_cgyrh"]
 [ext_resource type="Texture2D" uid="uid://b2gq2iqspdbb1" path="res://assets/images/tile/tile_Flag.png" id="4_cgyrh"]
